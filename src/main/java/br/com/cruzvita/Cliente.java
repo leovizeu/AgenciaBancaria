@@ -7,7 +7,7 @@ public class Cliente {
 	private String nome;
 	private String idade;
 	private String nomeBanco;
-	
+		
 	public Cliente(String nome, String idade, String nomeBanco) {
 		this.nome = nome;
 		this.idade = idade;
@@ -31,19 +31,19 @@ public class Cliente {
 		this.idade = idade;
 	}
 	
-	public String getnomeBanco () {
+	public String getNomeBanco () {
 		return nomeBanco;
 	}
 	
-	public void setNomeBan0co (String nomeBanco) {
+	public void setNomeBanco (String nomeBanco) {
 		this.nomeBanco = nomeBanco;
 	}
 	
 	public String toString() {
-		return "\nNome: " + this.getNome() + 
-				"\nIdade: " + this.getIdade() + 
-				"\nNomeBanco: " + this.getnomeBanco();
-				//String.format("%.2f", saldo) ;
+		return "\nNome: " + this.getNome() +
+			   "\nIdade: " + this.getIdade() + 
+			   "\nNomeBanco: " + this.getNomeBanco();
+			   //String.format("%.2f", saldo) ;
 	}
 	
 }

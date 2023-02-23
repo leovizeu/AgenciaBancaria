@@ -1,18 +1,14 @@
 package br.com.cruzvita;
 
-import java.util.Scanner;
-
 import utilitarios.Utils;
 
 public class Banco {
 
 	private static int contadorContas = 1;
 
-	private int numeroConta;
-	private double saldo = 0.0;
-	private double contaDeposito;
+	private int    numeroConta;
 	Cliente cliente;
-	// Conta conta;
+	private Double saldo = 0.0;
 
 	public Banco(Cliente cliente) {
 		this.numeroConta = contadorContas;
@@ -32,7 +28,7 @@ public class Banco {
 		return saldo;
 	}
 
-	public void setSaldo(double saldo) {
+	public void setSaldo(Double saldo) {
 		this.saldo = saldo;
 	}
 
@@ -45,15 +41,15 @@ public class Banco {
 	}
 
 	public String toString() {
-		return "\nNúmero da Conta: " + this.getNumeroConta() +
-			   "\nNome: " + this.cliente.getNome() +
-			   "\nIdade: " + this.cliente.getIdade() +
-			   "\nNomeBanco: " + this.cliente.getnomeBanco() +
-			   "\nSaldo: " + Utils.doubleToString(this.getSaldo()) +
-			   "\n";
+		return	"\nNome: " + this.cliente.getNome() +
+			    "\nIdade: " + this.cliente.getIdade() +
+			    "\nBanco: " + this.cliente.getNomeBanco() +
+			    "\nNúmero da Conta: " + this.getNumeroConta() +
+			    "\nSaldo: " + Utils.doubleToString(this.getSaldo()) +
+			    "\n";
 	}
 	
-	public void depositar (double valor) {
+	public void depositar (Double valor) {
 		if (valor > 0) {
 			setSaldo(getSaldo() + valor);
 			System.out.println("Seu depósito foi realizado com Sucesso!");
@@ -62,19 +58,20 @@ public class Banco {
 		}
 	}
 	
-	public void sacar (double valor) {
+	public void sacar (Double valor) {
 		if (valor > 0 && this.getSaldo() >= valor) {
 			setSaldo(getSaldo() - valor);
 			System.out.println("Saque realizado com Sucesso!");
 		}else {
-			System.out.println("Não foi possível realizar o saque!");
+			System.out.println("Não foi possível realizar o saque! ");
 		}
 	}
 	
-	public void transferir (Conta contaParaDeposito, double valor) {
+	public void transferir (Banco contaParaDeposito, Double valor) {
 		if (valor > 0 && this.getSaldo() >= valor) {
 			setSaldo(getSaldo() - valor);
 			contaParaDeposito.saldo = contaParaDeposito.getSaldo();
+			System.out.println("Transferência foi realizada com Sucesso!");
 		}else {
 			System.out.println("Não foi possível realizar a transferência!");
 		}
