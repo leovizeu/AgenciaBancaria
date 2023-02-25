@@ -7,7 +7,9 @@ public class Cliente {
 	private String nome;
 	private String idade;
 	private String nomeBanco;
-		
+	
+	public Cliente (){}	
+
 	public Cliente(String nome, String idade, String nomeBanco) {
 		this.nome = nome;
 		this.idade = idade;
