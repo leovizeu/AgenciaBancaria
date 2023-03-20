@@ -10,6 +10,9 @@ public class Banco {
 	Cliente cliente;
 	private Double saldo = 0.0;
 
+	public Banco() {
+	}
+
 	public Banco(Cliente cliente) {
 		this.numeroConta = contadorContas;
 		this.cliente = cliente;
@@ -41,39 +44,37 @@ public class Banco {
 	}
 
 	public String toString() {
-		return	"\nNome: " + this.cliente.getNome() +
-			    "\nIdade: " + this.cliente.getIdade() +
-			    "\nBanco: " + this.cliente.getNomeBanco() +
-			    "\nNúmero da Conta: " + this.getNumeroConta() +
-			    "\nSaldo: " + Utils.doubleToString(this.getSaldo()) +
-			    "\n";
+		return "\nNome: " + this.cliente.getNome() +
+				"\nIdade: " + this.cliente.getIdade() +
+				"\nBanco: " + this.cliente.getNomeBanco() +
+				"\nNúmero da Conta: " + this.getNumeroConta() +
+				"\nSaldo: " + Utils.doubleToString(this.getSaldo()) +
+				"\n";
 	}
-	
-	public void depositar (Double valor) {
+
+	public void depositar(Double valor) {
 		if (valor > 0) {
 			setSaldo(getSaldo() + valor);
-			System.out.println("Seu depósito foi realizado com Sucesso!");
-		}else {
-			System.out.println("Não foi possível realizar o depósito!");
+			System.out.println("Operação realizada com sucesso");
+		} else {
+			System.out.println("Não foi possível realizara operação!");
 		}
 	}
-	
-	public void sacar (Double valor) {
-		if (valor > 0 && this.getSaldo() >= valor) {
-			setSaldo(getSaldo() - valor);
-			System.out.println("Saque realizado com Sucesso!");
-		}else {
-			System.out.println("Não foi possível realizar o saque! ");
+
+	public void sacar(double quantia) {
+		if (this.saldo > 0) {
+			saldo -= quantia;
+		} else {
+			System.out.println("Valor insulficiente para operação! ");
 		}
 	}
-	
-	public void transferir (Banco contaParaDeposito, Double valor) {
-		if (valor > 0 && this.getSaldo() >= valor) {
-			setSaldo(getSaldo() - valor);
-			contaParaDeposito.saldo = contaParaDeposito.getSaldo();
-			System.out.println("Transferência foi realizada com Sucesso!");
-		}else {
-			System.out.println("Não foi possível realizar a transferência!");
+
+	public void transferir(Banco contaParaDeposito, Double valor) {
+		if (this.saldo > 0) {
+			contaParaDeposito.depositar(valor);
+			this.sacar(valor);
+		} else {
+			System.out.println("Transferência não realizada Saldo insuficiente");
 		}
 	}
 }

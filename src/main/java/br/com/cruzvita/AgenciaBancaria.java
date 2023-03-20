@@ -3,6 +3,8 @@ package br.com.cruzvita;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+
 public class AgenciaBancaria {
 
 	static Scanner input = new Scanner(System.in);
@@ -78,12 +80,23 @@ public class AgenciaBancaria {
 	}
 
 	private static Banco encontrarConta(int numeroConta) {
+<<<<<<< HEAD
 		Banco banco = null;
 		if (contasBancarias.size() > 0) {
 			for (Banco c : contasBancarias) {
 				if (c.getNumeroConta() == numeroConta);
 				banco = c;
 			}
+=======
+
+		Banco banco = null;
+
+		for (Banco c : contasBancarias) {
+			if (c.getNumeroConta() == numeroConta & banco != null)
+				;
+			banco = c;
+
+>>>>>>> 3e2e14a9bf2756d0a802992c4a080480971f0af0
 		}
 		return banco;
 	}
@@ -99,6 +112,7 @@ public class AgenciaBancaria {
 				System.out.print("Qual valor deseja depositar? ");
 				double valorDeposito = input.nextDouble();
 				conta.depositar(valorDeposito);
+<<<<<<< HEAD
 				return;
 			}
 
@@ -148,10 +162,75 @@ public class AgenciaBancaria {
 			}
 		} else {
 			System.out.println("A conta não foi encontrada! :(");
+=======
+				operacoes();
+
+			}
+
+		}
+		System.out.println("A conta não foi encontrada! :(");
+		operacoes();
+	}
+
+	public static void sacar() {
+		System.out.print("Número da conta: ");
+		int numeroConta = input.nextInt();
+
+		//Banco banco = encontrarConta(numeroConta);
+
+		for (Banco conta : contasBancarias) {
+			if (conta.getNumeroConta() == numeroConta) {
+				System.out.print("Qual valor deseja depositar? ");
+				double valorSaque = input.nextDouble();
+				conta.sacar(valorSaque);
+				operacoes();
+
+			}
+
+>>>>>>> 3e2e14a9bf2756d0a802992c4a080480971f0af0
 		}
 		operacoes();
 	}
 
+<<<<<<< HEAD
+=======
+	// Banco contaRemetente = encontrarConta(numeroContaRemetente);
+
+	public static void transferir( ) {
+
+	
+
+		System.out.print("Número da conta remetente: ");
+		int ContaRemetente = input.nextInt();	
+
+		for (Banco conta1 : contasBancarias) {
+			if (conta1.getNumeroConta() == ContaRemetente) {
+
+				System.out.print("Número da conta destinatário: ");
+				int ContaDestinatario = input.nextInt();
+				
+				for (Banco conta2 : contasBancarias) {
+					if (conta2.getNumeroConta() == ContaDestinatario) {
+
+						System.out.print("Qual o valor da transferência?");
+						double valor = input.nextDouble();
+
+						conta1.sacar(valor);
+						conta2.depositar(valor);
+						operacoes();
+					}
+					System.out.println("conta Destinatária não encotrada.");
+				}
+
+				System.out.println("conta Remetente não encotrada.");
+
+			}
+		}
+		operacoes();
+
+	}
+
+>>>>>>> 3e2e14a9bf2756d0a802992c4a080480971f0af0
 	public static void listarContas() {
 		if (contasBancarias.size() > 0) {
 			for (Banco banco : contasBancarias) {

@@ -4,11 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99bd74f7-bf27-48dd-95b8-e5411abd6cca" name="Changes" comment="" />
+    <list default="true" id="99bd74f7-bf27-48dd-95b8-e5411abd6cca" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cruzvita/AgenciaBancaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cruzvita/AgenciaBancaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cruzvita/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cruzvita/Banco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cruzvita/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cruzvita/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/br.com.cruzvita/atividade-mvn/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/br.com.cruzvita/atividade-mvn/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cruzvita/AgenciaBancaria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cruzvita/AgenciaBancaria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cruzvita/Banco.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cruzvita/Banco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cruzvita/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cruzvita/Cliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utilitarios/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utilitarios/Utils.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -27,7 +48,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Vizeu/Codes/.metadata",
+    "last_opened_file_path": "C:/Users/leovi/Downloads/CruzVita",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -42,6 +67,8 @@
       <workItem from="1676579553097" duration="53000" />
       <workItem from="1676579616494" duration="11000" />
       <workItem from="1676579689915" duration="67000" />
+      <workItem from="1677288952199" duration="287000" />
+      <workItem from="1677291131192" duration="409000" />
     </task>
     <servers />
   </component>
