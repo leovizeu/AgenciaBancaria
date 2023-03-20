@@ -1,0 +1,14 @@
+package br.com.cruzvita;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+public class Cliente {
+
+	@GetMapping("/cliente")
+	@ResponseBody
+	public String cliente() {
+		return "Classe cliente";
+	}
+	
+}

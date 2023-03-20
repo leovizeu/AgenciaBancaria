@@ -1,0 +1,12 @@
+package br.com.cruzvita;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class Banco {
+
+	
+	public String banco() {
+		return "Classe banco";
+	}
+}

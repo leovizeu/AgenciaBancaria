@@ -1,0 +1,16 @@
+package br.com.cruzvita;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class Conta {
+
+	@GetMapping("/contas")
+	@ResponseBody
+	public String conta() {
+		return "Classe conta pessoa";
+	}
+	
+}

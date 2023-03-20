@@ -1,0 +1,15 @@
+package br.com.cruzvita;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class Banco {
+
+	@GetMapping("/banco")
+	@ResponseBody
+	public String banco() {
+		return "Classe banco";
+	}
+}

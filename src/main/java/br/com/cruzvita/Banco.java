@@ -6,7 +6,7 @@ public class Banco {
 
 	private static int contadorContas = 1;
 
-	private int    numeroConta;
+	private int numeroConta;
 	Cliente cliente;
 	private Double saldo = 0.0;
 
